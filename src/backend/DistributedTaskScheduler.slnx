@@ -1,0 +1,5 @@
+<Solution>
+        <Project Path="DistributedTaskScheduler.Api/DistributedTaskScheduler.Api.csproj" />
+        <Project Path="DistributedTaskScheduler.Core/DistributedTaskScheduler.Core.csproj" />
+        <Project Path="DistributedTaskScheduler.Worker/DistributedTaskScheduler.Worker.csproj" />
+</Solution>

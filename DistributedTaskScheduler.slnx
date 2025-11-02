@@ -1,7 +1,0 @@
-<Solution>
-    <Folder Name="/src/">
-        <Project Path="src/DistributedTaskScheduler.Api/DistributedTaskScheduler.Api.csproj" />
-        <Project Path="src/DistributedTaskScheduler.Core/DistributedTaskScheduler.Core.csproj" />
-        <Project Path="src/DistributedTaskScheduler.Worker/DistributedTaskScheduler.Worker.csproj" />
-    </Folder>
-</Solution>
