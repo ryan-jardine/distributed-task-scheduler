@@ -36,16 +36,6 @@
             "related": ".pdb;.xml"
           }
         }
-      },
-      "DistributedTaskScheduler.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v10.0",
-        "compile": {
-          "bin/placeholder/DistributedTaskScheduler.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DistributedTaskScheduler.Core.dll": {}
-        }
       }
     }
   },
@@ -85,16 +75,10 @@
         "microsoft.openapi.2.0.0.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
-    },
-    "DistributedTaskScheduler.Core/1.0.0": {
-      "type": "project",
-      "path": "../DistributedTaskScheduler.Core/DistributedTaskScheduler.Core.csproj",
-      "msbuildProject": "../DistributedTaskScheduler.Core/DistributedTaskScheduler.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "DistributedTaskScheduler.Core >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.0-rc.2.25502.107"
     ]
   },
@@ -122,11 +106,7 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {
-            "/Users/ryanjardine/dev/distributed-task-scheduler/src/DistributedTaskScheduler.Core/DistributedTaskScheduler.Core.csproj": {
-              "projectPath": "/Users/ryanjardine/dev/distributed-task-scheduler/src/DistributedTaskScheduler.Core/DistributedTaskScheduler.Core.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

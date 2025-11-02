@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SdFXqzcVAMo=",
+  "dgSpecHash": "BdVsbyvLRkc=",
   "success": true,
   "projectFilePath": "/Users/ryanjardine/dev/distributed-task-scheduler/src/DistributedTaskScheduler.Api/DistributedTaskScheduler.Api.csproj",
   "expectedPackageFiles": [

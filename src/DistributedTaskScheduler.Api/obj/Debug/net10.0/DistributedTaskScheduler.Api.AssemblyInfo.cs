@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DistributedTaskScheduler.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6422bb6e03a7761a150f1cec01b434071823b463")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7003781739d5e582e1ec88a791b1ca5adba6b57b")]
 [assembly: System.Reflection.AssemblyProductAttribute("DistributedTaskScheduler.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DistributedTaskScheduler.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
