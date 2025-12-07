@@ -3,6 +3,9 @@
   <ItemGroup>
     <ProjectReference Include="..\DistributedTaskScheduler.Core\DistributedTaskScheduler.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="RabbitMQ.Client" Version="7.2.0" />
+  </ItemGroup>
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
