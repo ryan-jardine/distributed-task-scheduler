@@ -1,5 +1,4 @@
-
-using System.Text.Json;
+using DistributedTaskScheduler.Core.Models;
 namespace DistributedTaskScheduler.Api.Services
 {
     public interface ITaskService

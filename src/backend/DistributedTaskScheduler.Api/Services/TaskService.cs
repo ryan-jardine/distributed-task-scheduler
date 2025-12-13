@@ -1,6 +1,7 @@
 using System.Text.Json;
 using DistributedTaskScheduler.Api.Services;
 using DistributedTaskScheduler.Core.Interfaces;
+using DistributedTaskScheduler.Core.Models;
 
 public class TaskService(IMessagePublisher publisher) : ITaskService
 {
