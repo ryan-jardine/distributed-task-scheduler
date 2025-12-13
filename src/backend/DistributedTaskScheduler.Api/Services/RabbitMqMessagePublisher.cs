@@ -9,7 +9,7 @@ public class RabbitMqMessagePublisher : IMessagePublisher
     {
         try
         {
-            var factory = new ConnectionFactory { HostName = "localhost" };
+            var factory = new ConnectionFactory { HostName = "rabbitmq" };
 
             using var connection = await factory.CreateConnectionAsync();
             using var channel = await connection.CreateChannelAsync();

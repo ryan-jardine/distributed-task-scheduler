@@ -10,7 +10,7 @@ public class RabbitMqMessageReceiver : IMessageReceiver
 {
     public async Task ReceiveAsync(string routingKey)
     {
-        var factory = new ConnectionFactory { HostName = "localhost" };
+        var factory = new ConnectionFactory { HostName = "rabbitmq" };
         var connection = await factory.CreateConnectionAsync();
         var channel = await connection.CreateChannelAsync();
 
