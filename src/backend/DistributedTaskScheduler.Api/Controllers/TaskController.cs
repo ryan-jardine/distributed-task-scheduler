@@ -16,10 +16,7 @@ namespace DistributedTaskScheduler.Api.Controllers
         private readonly ITaskService _taskService = taskService;
 
         [HttpPost]
-        [SwaggerOperation(
-            Summary = "Submit a task",
-            Description = "Allowed task types: Email, FileProcessing"
-        )]
+        [SwaggerOperation(Summary = "Submit a task", Description = "Allowed task types: Email, FileProcessing")]
         [SwaggerResponse(StatusCodes.Status200OK)]
         [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid taskType")]
 
@@ -41,14 +38,26 @@ namespace DistributedTaskScheduler.Api.Controllers
             }
         }
 
-        [HttpGet("types")]
-        public IActionResult GetTaskTypes()
+        [HttpPost("batch")]
+        [SwaggerOperation(Summary = "Submit a batch of tasks", Description = "Submit multiple random tasks in a single request with random durations.")]
+        [SwaggerResponse(StatusCodes.Status200OK)]
+        [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid taskType")]
+        public async Task<IActionResult> SubmitBatchTasks([FromBody] BatchTaskRequest batchTaskRequest)
         {
-            return Ok(new[]
+            try
             {
-                TaskTypeNames.Email,
-                TaskTypeNames.FileProcessing
-            });
+                if (!TaskTypeMap.TryGetType(batchTaskRequest.TaskType, out var taskType))
+                {
+                    return BadRequest("Invalid task type");
+                }
+
+                await _taskService.SubmitBatchJobs(batchTaskRequest, taskType);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
         }
     }
 }
