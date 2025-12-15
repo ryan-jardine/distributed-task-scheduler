@@ -11,11 +11,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`antialiased min-h-screen bg-zinc-950 text-zinc-50`}>
+    <html lang="en" className="dark">
+      <body
+        className={`antialiased min-h-screen bg-background text-foreground`}
+      >
         <div className="container mx-auto py-10 grid grid-cols-7 gap-4">
-          <div className="col-span-2">side</div>
-          <div className="col-span-5">{children}</div>
+          {children}
         </div>
       </body>
     </html>

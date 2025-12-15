@@ -41,24 +41,16 @@ async function getData(): Promise<TaskStatus[]> {
       taskType: "File Processing",
       startTime: new Date(now - 3 * 60 * 60 * 1000), // 3h ago
     },
-    {
-      id: 7,
-      status: "pending",
-      taskType: "Email",
-      startTime: new Date(now - 10 * 1000), // 10s ago
-    },
-    {
-      id: 8,
-      status: "completed",
-      taskType: "Email",
-      startTime: new Date(now - 6 * 60 * 60 * 1000), // 6h ago
-    },
   ];
 }
 
 const TaskTable = async () => {
   const data = await getData();
-  return <DataTable columns={columns} data={data} />;
+  return (
+    <div className="col-span-5 max-h-[275px] overflow-y-auto">
+      <DataTable columns={columns} data={data} />
+    </div>
+  );
 };
 
 export default TaskTable;
